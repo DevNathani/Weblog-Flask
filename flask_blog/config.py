@@ -3,7 +3,6 @@ import os
 class Config:
     #set them also environment variables
     SECRET_KEY = os.environ.get('FORUM_SECRET')
-    # SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
 
     MAIL_SERVER = 'smtp.gmail.com'
