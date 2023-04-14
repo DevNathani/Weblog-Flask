@@ -5,7 +5,7 @@ import os
 def send_feedback_email(form):
     msg = Message(form.subject.data,
                   sender = "feedback@demo.com",
-                  recipients=['nathanidb313@gmail.com'])
+                  recipients=[os.environ.get('EMAIL')])
     msg.body = f''' A message recieved from <{form.email.data}>
 Message Body
 {form.description.data}
