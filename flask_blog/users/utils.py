@@ -35,10 +35,3 @@ def send_reset_email(user):
 If you did not make this request, Ignore this mail
 '''
     mail.send(msg)
-#     mail.send_message('Password Reset Request',
-#                       sender = os.environ.get('EMAIL_USER'),
-#                       recipients=[user.email],
-#                       body = f'''to reset your password, visit the following link
-# {url_for('users.reset_password',token = token, _external = True)}  
-# If you did not make this request, Ignore this mail
-# ''')
